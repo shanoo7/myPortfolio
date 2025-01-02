@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FiAlignRight } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
+import { Link } from 'react-scroll';
 
 function Navbar() {
     const [menu, setMenu] = useState(false)
@@ -48,15 +49,22 @@ function Navbar() {
         <div className='flex justify-between' >
                 <div className='flex gap-2'>
                     <img className='w-12 h-12 rounded-full' src="myPic.jpg" alt="myPic" />
-                    <div className='text-gray-500'>
+                    <div className='text-gray-700 text-xs lg:text-sm'>
                         <h1>Shummy Ranjan Shanoo</h1>
-                        <p>Web developer</p>
+                        <p className='font-bold'>Web developer</p>
                     </div>
                 </div>
                 <div>
                     <ul className='md:flex gap-4 hidden'>
                         {navIcon.map(({id,name})=>(
-                            <li className='hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer ' key={id}>{name}</li>
+                            <li className='hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer ' key={id}><Link 
+                            to={name}
+                            smooth={true}
+                            duration={500}
+                            offset={-100}
+                            activeClass="active"
+                            >{name}
+                            </Link></li>
                         ))}
                     </ul>
                     <div className='md:hidden text-2xl cursor-pointer' onClick={()=>setMenu((prev)=>!prev)}>{menu?<FiX/>:<FiAlignRight/>}</div>
@@ -66,7 +74,16 @@ function Navbar() {
            {
             menu &&  <ul className='md:hidden text-xl flex flex-col items-center mt-10 justify-center gap-10'>
             {navIcon.map(({id,name})=>(
-                            <li className='hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer' key={id}>{name}</li>
+                            <li className='hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer' key={id}>
+                                <Link 
+                                to={name}
+                                smooth={true}
+                                duration={500}
+                                offset={-100}
+                                activeClass="active"
+                                onClick={()=>setMenu(!menu)}
+                                >{name}
+                                </Link></li>
                         ))}
             </ul>
            }
