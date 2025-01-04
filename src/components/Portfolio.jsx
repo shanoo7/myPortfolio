@@ -15,20 +15,6 @@ function Portfolio() {
       name: "Todo (CURD)",
       link: "https://todo-curd-vert.vercel.app/",
       code: "https://github.com/shanoo7/todo-curd"
-    },
-    {
-      id: 3,
-      logo: "myPic.jpg",
-      name: "...",
-      link: "#",
-      code: "#"
-    },
-    {
-      id: 4,
-      logo: "myPic.jpg",
-      name: "...",
-      link: "#",
-      code: "#"
     }
   ]
   return (
