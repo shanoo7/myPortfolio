@@ -34,8 +34,8 @@ function Portfolio() {
                 >
 
                   <div className='flex md:justify-between gap-5'>
-                    <a href={item.link} target="_blank"><button className='bg-green-500 min-w-18 mt-40 px-2 py-1 text-xs rounded hover:bg-green-600'>View Live</button></a>
-                    <a href={item.code} target="_blank"><button className='bg-gray-500 min-w-18 mt-40 px-2 py-1 text-xs rounded hover:bg-gray-600'>View Code</button></a>
+                    <button className='bg-green-500 min-w-18 mt-40 px-2 py-1 text-xs rounded hover:bg-green-600'> <a href={item.link} target="_blank">View Live</a></button>
+                    <button className='bg-gray-500 min-w-18 mt-40 px-2 py-1 text-xs rounded hover:bg-gray-600'> <a href={item.code} target="_blank">View Code</a></button>
                   </div>
                 </div>
                 <h1 className='mt-2 text-gray-500 '>{item.name}</h1>

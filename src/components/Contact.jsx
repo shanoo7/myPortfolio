@@ -49,7 +49,7 @@ function Contact() {
 
   return (
     <>
-      <div name="Contact" className="max-w-screen-2xl container py-4 m-auto my-5 px-4 md:px-20">
+      <div name="Contact" className="max-w-screen-2xl container py-4 m-auto px-4 md:px-20 min-h-screen">
         <h2 className="text-3xl font-bold text-gray-500 mb-8">Contact Me</h2>
         <form onSubmit={handleSubmit} className="shadow-2xl shadow-red-500 hover:shadow-red-200 m-auto p-5 rounded-lg shadow-lg space-y-6 max-w-xl">
           {err && <div className='text-red-500 text-center'>{err}</div>}
