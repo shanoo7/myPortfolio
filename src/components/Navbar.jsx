@@ -77,7 +77,7 @@ function Navbar() {
 
                 </div>
                 {
-                    menu && <ul className='md:hidden text-xl flex flex-col items-center mt-10 justify-center gap-10'>
+                    menu && <ul className='md:hidden text-xl transform transition-all duration-300 flex flex-col items-center mt-10 justify-center gap-10'>
                         {navIcon.map(({ id, name }) => (
                             <li className='hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer' key={id}>
                                 <Link

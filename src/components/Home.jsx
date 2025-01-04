@@ -45,12 +45,12 @@ function Home() {
                                 </a>
                             </li>
                             <li>
-                                <a href="https://linkedin.com/in/your-linkedin" target="_blank">
+                                <a href="https://www.linkedin.com/in/shummy-ranjan-shanoo-66838b125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                                     <FaLinkedin className='text-2xl cursor-pointer hover:scale-105 duration-300 text-blue-700' />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://t.me/your-telegram" target="_blank">
+                                <a href="https://t.me/Shanoo007" target="_blank">
                                     <FaTelegram className='text-2xl cursor-pointer hover:scale-105 duration-300 text-blue-500' />
                                 </a>
                             </li>
