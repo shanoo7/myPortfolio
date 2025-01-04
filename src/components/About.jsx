@@ -16,12 +16,11 @@ function About() {
           </div>
           {/* Right Section - Content */}
           <div className="md:w-2/3">
-            <p className="text-gray-500 text-lg leading-relaxed">
-              Hi! I'm <span className="font-bold text-gray-500">Shummy Ranjan Shanoo</span>, a passionate developer with a love for creating elegant solutions to complex problems.
-              I specialize in full-stack web development and enjoy learning new technologies and applying them in meaningful ways.
+          <p className="text-gray-500 text-lg leading-relaxed">
+              Hi! I'm <span className="font-bold text-gray-400">Shummy Ranjan Shanoo</span>, a passionate developer transitioning into software development. I have a B.Tech degree in Mechanical Engineering, which I completed in 2017. Recently, I completed a Full Stack Web Development course at Edureka, where I gained hands-on experience with technologies such as HTML, CSS, JavaScript, React, and Node.js.
             </p>
             <p className="text-gray-500 text-lg leading-relaxed mt-4">
-              When I'm not coding, you can find me exploring nature, playing video games, or reading a good book.
+              I also did an unpaid internship with <span className="font-bold text-gray-400" >The Entrepreneurship Network</span>, where I worked on real-world projects. This allowed me to practically apply my skills and gain confidence in building websites and applications. My goal is to continue growing as a developer and contribute to impactful projects.
             </p>
             <h3 className="text-xl font-semibold text-gray-500 mt-6">Skills:</h3>
             <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4 text-gray-500">

@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio.jsx';
 import Experience from './components/Experience.jsx';
 import Contact from './components/Contact.jsx';
 import { Toaster } from 'react-hot-toast';
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const particlesInit = useCallback(async engine => {
@@ -103,6 +104,7 @@ function App() {
       <Portfolio />
       <Experience />
       <Contact />
+      <Footer/>
       <Toaster />
     </div>
   );

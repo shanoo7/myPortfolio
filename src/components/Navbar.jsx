@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 
 function Navbar() {
     const [menu, setMenu] = useState(false)
+    const [activeLink,setActiveLink] = useState("Home")
     const [sticky, setSticky] = useState(false)
     useEffect(() => {
         const scrollFunction = () => {
@@ -53,16 +54,20 @@ function Navbar() {
                             <h1 className=''>Shummy Ranjan Shanoo</h1>
                             <p className='font-semibold '>Web developer</p>
                         </div>
-                    </div>
+                    </div> 
                     <div>
                         <ul className='md:flex gap-4 hidden'>
                             {navIcon.map(({ id, name }) => (
-                                <li className='hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer ' key={id}><Link
+                               
+
+                                <li key={id}  className={`${activeLink === name ? "text-green-500" : ""} hover:scale-105 duration-200 hover:text-yellow-300 cursor-pointer`} >
+                                    <Link
                                     to={name}
                                     smooth={true}
                                     duration={500}
                                     offset={-100}
-                                    activeClass="active"
+                                     activeClass="active"
+                                    onClick={()=>setActiveLink(name)}
                                 >{name}
                                 </Link></li>
                             ))}
