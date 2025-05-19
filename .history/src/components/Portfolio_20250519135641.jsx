@@ -39,8 +39,8 @@ function Portfolio() {
    {
     id: 4,
     title: "Redux toolkit",
-    description: "This project is a CRUD application built using React.js and Redux Toolkit for state management.",
-    img: "rtk.png",
+    description: "React Tailwind website with design, development, marketing solutions.",
+    img: "namrata-universal.png",
     github: <FaGithub />,
     live:<FiExternalLink />,
     githublink:"https://github.com/shanoo7/reduxToolkitCurd",

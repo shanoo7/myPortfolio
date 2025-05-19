@@ -19,7 +19,7 @@ const AboutMe = () => {
           <img
             src="myImg.jpeg"
             alt="Developer working"
-            className="rounded shadow-lg w-full max-w-md object-cover"
+            className="rounded shadow-lg w-full max-w-2xl object-cover"
           />
         </div>
 

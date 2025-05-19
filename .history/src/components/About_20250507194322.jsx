@@ -17,9 +17,9 @@ const AboutMe = () => {
         {/* Image Section */}
         <div data-aos="zoom-out-right" className="flex">
           <img
-            src="myImg.jpeg"
+            src="myPic.jpg"
             alt="Developer working"
-            className="rounded shadow-lg w-full max-w-md object-cover"
+            className="rounded shadow-lg w-full max-w-2xl object-cover"
           />
         </div>
 
