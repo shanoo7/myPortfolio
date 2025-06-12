@@ -1,15 +1,25 @@
 import React from 'react'
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
  
   const cardData = [
-  {
+    {
     id: 1,
+    title: "Job Portal",
+    description: "Role-based MERN job portal with secure login, job posting, resume upload, and application tracking.",
+    img: " jobPortal.png",
+    github: <FaGithub />,
+    live:<FiExternalLink />,
+    githublink:"https://github.com/shanoo7/jobPortalMern",
+    livelink:"https://jobportaapplication.onrender.com",
+  },
+  {
+    id: 2,
     title: "Todo",
     description: "Full-stack CRUD todo app with interactive task management.",
-    badge: 24,
     img: " todo.png",
     github: <FaGithub />,
     live:<FiExternalLink />,
@@ -17,7 +27,7 @@ function Portfolio() {
     livelink:"https://todo-curd-vert.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Book Store",
     description: "MERN bookstore app with authentication, API, and forms.",
     img: "bookStore.png",
@@ -27,7 +37,7 @@ function Portfolio() {
     livelink:"https://book-store-u4ae.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Namrata Universal",
     description: "React Tailwind website with design, development, marketing solutions.",
     img: "namrata-universal.png",
@@ -37,7 +47,7 @@ function Portfolio() {
     livelink:"",
   },
    {
-    id: 4,
+    id: 5,
     title: "Redux toolkit",
     description: "This project is a CRUD application built using React.js and Redux Toolkit for state management.",
     img: "rtk.png",
@@ -72,28 +82,28 @@ function Portfolio() {
           >
            
             <div className="p-2 flex justify-center">
-              <a href={card.link}>
+              <Link to={card.link}>
                 <img
                   className="rounded-md"
                   src={card.img}
                   alt={card.title}
                   loading="lazy"
                 />
-              </a>
+              </Link>
             </div>
             <div className="px-4 pb-3">
               <div>
-                <a className='relative'>
+                <div className='relative'>
                   <h5 className="text-xl  font-semibold tracking-tight text-gray-900 dark:text-white">
                     {card.title}
                   </h5>
                   <div className="absolute top-0 right-10 rounded-full bg-gray-600 text-gray-200 w-6 h-6 text-center text-xs flex items-center justify-center">
-                  <a href={card.githublink}>{card.github}</a>
+                  <Link to={card.githublink}>{card.github}</Link>
             </div>
             <div className="absolute top-0 right-0 rounded-full bg-violet-600 text-gray-200 w-6 h-6 text-center text-xs flex items-center justify-center">
-              <a href={card.livelink}>{card.live}</a>
+              <Link to={card.livelink}>{card.live}</Link>
             </div>
-                </a>
+                </div>
                 <p className="antialiased text-gray-600 dark:text-gray-400 text-sm mt-3 break-all">
                   {card.description}
                 </p>

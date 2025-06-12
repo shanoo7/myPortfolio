@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
@@ -97,7 +97,7 @@ const ContactForm = () => {
 
         <div className="flex flex-col md:flex-row gap-8 w-full">
           {/* Left Contact Info */}
-          <div className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2">
+          <div className="bg-gray-800 p-8 rounded-md shadow-xl w-full md:w-1/2">
             <h2 data-aos="zoom-out" className="text-2xl font-bold mb-8">Contact Information</h2>
             <div data-aos="fade-right"
      data-aos-offset="300"
@@ -147,14 +147,12 @@ const ContactForm = () => {
           {/* Right Form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="bg-gray-800 p-8 rounded-3xl shadow-xl w-full md:w-1/2"
+            className="bg-gray-800 p-8 rounded-md shadow-xl w-full md:w-1/2"
           >
             <h2 data-aos="zoom-out" className="text-2xl font-bold mb-6">{steps[currentStep].title}</h2>
 
             {steps.map((step, index) => (
-              <div data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine" key={step.id} className={currentStep === index ? 'block' : 'hidden'}>
+              <div key={step.id} className={currentStep === index ? 'block' : 'hidden'}>
                 {step.type === 'textarea' ? (
                   <>
                     <textarea

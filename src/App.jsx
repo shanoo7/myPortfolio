@@ -1,6 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
