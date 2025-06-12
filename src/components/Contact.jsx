@@ -66,16 +66,16 @@ const ContactForm = () => {
 
   const messageText = watch('step4') || '';
 
-  const onSubmit =  async (data) => {
-   try {
-    await axios.post("https://getform.io/f/ayvvzpkb", data)
-    // console.log('Submitted data:', data);
-    toast.success('Submitted data')
-    reset();
-     } catch (error) {
-    // console.log(error.message)
-    toast.error("This is an error!");
-   }
+  const onSubmit = async (data) => {
+    try {
+      await axios.post("https://getform.io/f/ayvvzpkb", data)
+      // console.log('Submitted data:', data);
+      toast.success('Submitted data')
+      reset();
+    } catch (error) {
+      // console.log(error.message)
+      toast.error("This is an error!");
+    }
   };
 
   const handleNext = async () => {
@@ -89,19 +89,19 @@ const ContactForm = () => {
   };
 
   return (
-    <div name="Contact"  className="min-h-screen  p-4 flex flex-col items-center pb-8">
+    <div name="Contact" className="min-h-screen  p-4 flex flex-col items-center pb-8">
       <div className="w-full max-w-6xl mt-8">
         <h2 data-aos="zoom-out" className="text-4xl text-center font-bold mb-2">Let's Connect</h2>
         <p data-aos="zoom-out" className="text-gray-400 mb-10 text-center">Choose your preferred way to reach out</p>
-     
+
 
         <div className="flex flex-col md:flex-row gap-8 w-full">
           {/* Left Contact Info */}
           <div className="bg-gray-800 p-8 rounded-md shadow-xl w-full md:w-1/2">
             <h2 data-aos="zoom-out" className="text-2xl font-bold mb-8">Contact Information</h2>
             <div data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine" className="space-y-8 text-sm">
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine" className="space-y-8 text-sm">
               {[
                 {
                   iconBg: 'bg-blue-900',
@@ -127,7 +127,7 @@ const ContactForm = () => {
                   svgPath:
                     'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z',
                 },
-              
+
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4 group">
                   <div className={`${item.iconBg} p-4 rounded-xl transform transition-transform duration-300 group-hover:translate-y-2`}>
@@ -180,7 +180,7 @@ const ContactForm = () => {
               </div>
             ))}
 
-            <div  className="flex justify-between mt-8">
+            <div className="flex justify-between mt-8">
               {currentStep > 0 && (
                 <button
                   type="button"
@@ -215,9 +215,8 @@ const ContactForm = () => {
               {steps.map((_, index) => (
                 <div
                   key={index}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    currentStep === index ? 'w-8 bg-blue-500' : 'w-2 bg-gray-600'
-                  }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${currentStep === index ? 'w-8 bg-blue-500' : 'w-2 bg-gray-600'
+                    }`}
                 ></div>
               ))}
             </div>
